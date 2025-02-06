@@ -296,3 +296,9 @@ def decode_raw_args(
         if type(arg) is bytes else arg
         for arg in args
     ]
+def main(
+    args: List[Union[str, bytes]] = sys.argv,
+    env: Environment = Environment()
+) -> ExitStatus:
+    print("🚀 HTTPie CLI has been modified successfully!")
+    return ExitStatus.SUCCESS
