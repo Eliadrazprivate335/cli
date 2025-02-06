@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  httpie:
+    build:
+      context: .
+    working_dir: /app
+    volumes:
+      - .:/app  # Bind mount for local development
+    command: python -m httpie
